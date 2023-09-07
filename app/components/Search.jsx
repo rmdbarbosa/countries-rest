@@ -3,7 +3,7 @@
 import React, { startTransition } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { usePathname, useRouter } from "next/navigation";
-import { useState, useTransition } from "react";
+import { useTransition } from "react";
 
 export default function Search() {
   let pathname = usePathname();
