@@ -11,7 +11,7 @@ export default function FlagCard() {
       <Card id="theme" sx={{ maxWidth: 320 }}>
         <CardActionArea>
           <CardMedia component="img" image="https://flagcdn.com/w320/br.png" />
-          <CardContent className="pb-12">
+          <CardContent className="pb-12 ml-2">
             <Typography gutterBottom variant="h5" component="div">
               Brazil
             </Typography>
