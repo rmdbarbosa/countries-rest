@@ -11,3 +11,13 @@
   background-color: hsl(0, 0%, 98%);
   color: hsl(200, 15%, 8%);
 }
+
+[data-theme="dark"] #theme {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+
+[data-theme="light"] #theme {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+}

@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Search from "./components/Search";
 
 export default function Home() {
   return (
     <main>
-      <h1>test</h1>
+      <Search />
     </main>
   );
 }

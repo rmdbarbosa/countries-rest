@@ -4,7 +4,8 @@ import SearchIcon from "@mui/icons-material/Search";
 export default function Search() {
   return (
     <div>
-      <input className="before:content" type="text" placeholder="Search" />
+      <SearchIcon />
+      <input className="bg-transparent" type="text" placeholder="Search" />
     </div>
   );
 }

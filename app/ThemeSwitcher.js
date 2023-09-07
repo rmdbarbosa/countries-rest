@@ -1,4 +1,6 @@
 "use client";
+import React from "react";
+import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -15,11 +17,25 @@ const ThemeSwitcher = () => {
     return null;
   }
 
+  const themeHandler = () => {
+    if (theme === "dark") {
+      setTheme("light");
+    } else setTheme("dark");
+  };
+
   return (
-    <div>
-      The current theme is: {theme}
-      <button onClick={() => setTheme("light")}>Light Mode</button>
-      <button onClick={() => setTheme("dark")}>Dark Mode</button>
+    <div
+      data-theme={theme}
+      id="theme"
+      className="flex justify-between p-6 items-center"
+    >
+      <div>
+        <h5 className="font-bold text-sm">Where in the world?</h5>
+      </div>
+      <div className="flex gap-2 cursor-pointer" onClick={() => themeHandler()}>
+        <NightlightOutlinedIcon className="w-5" />
+        <h2 className="text-sm font-bold">Dark Mode</h2>
+      </div>
     </div>
   );
 };
