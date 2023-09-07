@@ -2,13 +2,20 @@ import Filter from "./components/Filter";
 import FlagCard from "./components/FlagCard";
 import Search from "./components/Search";
 
-export default async function Home() {
+export default async function Home({ searchParams }) {
+  let loading = true;
+  let search = searchParams.search ?? "";
+
   const res = await fetch("https://restcountries.com/v3.1/all");
   const data = await res.json();
 
   const countryElements = await data.map((country) => {
     return <FlagCard key={country.name.common} {...country} />;
   });
+
+  // const countryFilter = await data.filter((country) => {
+  //   return country.name.common.toLowerCase().includes(search);
+  // });
 
   return (
     <main>
@@ -18,7 +25,9 @@ export default async function Home() {
       </div>
 
       <div className="flex flex-wrap gap-12 justify-center mb-6">
-        {countryElements}
+        {countryElements.filter((country) => {
+          return country.props.name.common.toLowerCase().includes(search);
+        })}
       </div>
     </main>
   );
