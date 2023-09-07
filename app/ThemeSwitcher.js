@@ -27,7 +27,7 @@ const ThemeSwitcher = () => {
     <div
       data-theme={theme}
       id="theme"
-      className="flex justify-between p-6 items-center"
+      className="flex justify-between p-6 items-center shadow-md"
     >
       <div>
         <h5 className="font-bold text-sm">Where in the world?</h5>
