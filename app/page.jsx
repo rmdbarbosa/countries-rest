@@ -7,13 +7,16 @@ export default async function Home() {
   const data = await res.json();
 
   const countryElements = await data.map((country) => {
-    return <FlagCard {...country} />;
+    return <FlagCard key={country.name.common} {...country} />;
   });
 
   return (
     <main>
-      <Search />
-      <Filter />
+      <div className="sm:flex justify-between sm:mx-8">
+        <Search />
+        <Filter />
+      </div>
+
       <div className="flex flex-wrap gap-12 justify-center mb-6">
         {countryElements}
       </div>

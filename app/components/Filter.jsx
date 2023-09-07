@@ -3,7 +3,7 @@ import React from "react";
 export default function Filter() {
   return (
     <div
-      className="flex m-6 shadow-md h-10 gap-6 rounded pl-6 w-1/2 sm:w-1/4"
+      className="flex m-6 shadow-md h-10 gap-6 rounded pl-6 w-1/2 sm:w-fit pr-6"
       id="theme"
     >
       <select id="theme">
