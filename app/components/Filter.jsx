@@ -7,7 +7,7 @@ export default function Filter() {
       id="theme"
     >
       <select id="theme">
-        <option value="" selected disabled hidden>
+        <option selected disabled hidden>
           Filter by Region
         </option>
         <option value="africa">Africa</option>
