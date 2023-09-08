@@ -30,7 +30,7 @@ export default function Filter() {
       id="theme"
     >
       <select id="theme" onChange={handleSelect}>
-        <option selected disabled hidden>
+        <option value="filter" disabled hidden>
           Filter by Region
         </option>
         <option value="">Filter by Region</option>

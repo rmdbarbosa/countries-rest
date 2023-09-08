@@ -1,5 +1,6 @@
-import Button from "@mui/material/Button";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import Box from "@mui/material/Box";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function ProductPage({ params }) {
@@ -7,7 +8,7 @@ export default async function ProductPage({ params }) {
   const data = await res.json();
 
   return (
-    <div>
+    <>
       <Link href={"/"}>
         <button
           id="theme"
@@ -16,6 +17,14 @@ export default async function ProductPage({ params }) {
           <KeyboardBackspaceIcon className="w-4" /> Back
         </button>
       </Link>
-    </div>
+      <Box className="bg-black m-6">
+        <Image
+          src={data[0].flags.png}
+          width={330}
+          height={300}
+          alt={data[0].name.common}
+        />
+      </Box>
+    </>
   );
 }
