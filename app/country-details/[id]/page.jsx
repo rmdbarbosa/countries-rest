@@ -1,14 +1,15 @@
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import Box from "@mui/material/Box";
-import Image from "next/image";
+import { CardMedia } from "@mui/material";
+
 import Link from "next/link";
 
 export default async function ProductPage({ params }) {
   const res = await fetch(`https://restcountries.com/v3.1/name/${params.id}`);
   const data = await res.json();
+  const country = await data[0];
 
   return (
-    <>
+    <div className="sm:m-12">
       <Link href={"/"}>
         <button
           id="theme"
@@ -17,14 +18,14 @@ export default async function ProductPage({ params }) {
           <KeyboardBackspaceIcon className="w-4" /> Back
         </button>
       </Link>
-      <Box className="bg-black m-6">
-        <Image
-          src={data[0].flags.png}
-          width={330}
-          height={300}
-          alt={data[0].name.common}
+      <div className="m-6 w-[320px] lg:w-[500px]">
+        <CardMedia
+          component="img"
+          className="h-[160px] lg:h-[320px]"
+          image={country.flags.png}
+          loading="lazy"
         />
-      </Box>
-    </>
+      </div>
+    </div>
   );
 }
