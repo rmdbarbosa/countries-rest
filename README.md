@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/screenshot.jpg)
+![screenshot](https://github.com/rmdbarbosa/countries-rest/assets/69510537/2a7572ea-7a92-4157-bde5-7e20d2a527f5)
 
 ### Links
 
