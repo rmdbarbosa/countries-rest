@@ -29,12 +29,11 @@ export default async function ProductPage({ params }) {
 
     borderFinal = borderData.slice(0, 3).map((bor) => {
       return (
-        <Link href={`http://localhost:3000/country-details/${bor.name.common}`}>
-          <li
-            key={bor.name.common}
-            id="theme"
-            className="rounded min-w-[67px] h-[22px]"
-          >
+        <Link
+          key={bor.name.common}
+          href={`/country-details/${bor.name.common}`}
+        >
+          <li id="theme" className="rounded min-w-[67px] h-[22px]">
             {bor.name.common}
           </li>
         </Link>
