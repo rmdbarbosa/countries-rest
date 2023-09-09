@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/rmdbarbosa/countries-rest)
-- Live Site URL: [Add live site URL here](https://countries-rest-sigma.vercel.app/)
+- Solution URL: [Repo Solution](https://github.com/rmdbarbosa/countries-rest)
+- Live Site URL: [Live Site URL](https://countries-rest-sigma.vercel.app/)
 
 ### Built with
 
@@ -46,5 +46,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://portfolio-rafaelbarbosa.vercel.app/)
+- Website - [Portfolio](https://portfolio-rafaelbarbosa.vercel.app/)
 - Linkedin - [rbarbosa94](https://www.linkedin.com/in/rbarbosa94/)
