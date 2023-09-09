@@ -29,13 +29,15 @@ export default async function ProductPage({ params }) {
 
     borderFinal = borderData.slice(0, 3).map((bor) => {
       return (
-        <li
-          key={bor.name.common}
-          id="theme"
-          className="rounded w-[67px] h-[22px]"
-        >
-          {bor.name.common}
-        </li>
+        <Link href={`http://localhost:3000/country-details/${bor.name.common}`}>
+          <li
+            key={bor.name.common}
+            id="theme"
+            className="rounded min-w-[67px] h-[22px]"
+          >
+            {bor.name.common}
+          </li>
+        </Link>
       );
     });
   } catch (error) {
