@@ -14,7 +14,7 @@ export default function Search() {
   let handleSearch = (term) => {
     let params = new URLSearchParams(window.location.search);
     if (term) {
-      params.set("search", term);
+      params.set("search", term.toLowerCase());
     } else {
       params.delete("search");
     }
