@@ -16,6 +16,7 @@ export default function FlagCard(props) {
             className="h-[160px]"
             image={props.flags.png}
             loading="lazy"
+            alt={props.name.common}
           />
           <CardContent className="pb-12 ml-2">
             <Typography gutterBottom variant="h5" component="div">

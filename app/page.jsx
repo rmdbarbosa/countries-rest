@@ -5,7 +5,9 @@ import Search from "./components/Search";
 export default async function Home({ searchParams }) {
   let search = searchParams.search ?? "";
 
-  const res = await fetch("https://restcountries.com/v3.1/all");
+  const res = await fetch(
+    "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital"
+  );
   const data = await res.json();
 
   const countryElements = await data.map((country) => {

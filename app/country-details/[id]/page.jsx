@@ -4,7 +4,9 @@ import { CardMedia } from "@mui/material";
 import Link from "next/link";
 
 export default async function ProductPage({ params }) {
-  const res = await fetch(`https://restcountries.com/v3.1/name/${params.id}`);
+  const res = await fetch(
+    `https://restcountries.com/v3.1/name/${params.id}?fields=name,flags,population,region,capital,currencies,languages,tld,subregion,borders`
+  );
   const data = await res.json();
   const country = await data[0];
 

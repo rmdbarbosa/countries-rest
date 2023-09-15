@@ -29,16 +29,28 @@ export default function Filter() {
       className="flex m-6 shadow-md h-10 gap-6 rounded pl-6 w-1/2 sm:w-fit pr-6"
       id="theme"
     >
-      <select id="theme" onChange={handleSelect}>
-        <option value="filter" disabled hidden>
+      <select id="theme" onChange={handleSelect} aria-label="country-filter">
+        <option value="filter" disabled hidden label="country-filter-default">
           Filter by Region
         </option>
-        <option value="">Filter by Region</option>
-        <option value="africa">Africa</option>
-        <option value="america">America</option>
-        <option value="asia">Asia</option>
-        <option value="europe">Europe</option>
-        <option value="oceania">Oceania</option>
+        <option value="" label="Filter By Region">
+          Filter by Region
+        </option>
+        <option value="africa" label="Africa">
+          Africa
+        </option>
+        <option value="america" label="America">
+          America
+        </option>
+        <option value="asia" label="Asia">
+          Asia
+        </option>
+        <option value="europe" label="Europe">
+          Europe
+        </option>
+        <option value="oceania" label="Oceania">
+          Oceania
+        </option>
       </select>
     </div>
   );
